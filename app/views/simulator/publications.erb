@@ -1,0 +1,15 @@
+<div id="publications">
+  <p>Il y a plusieurs dates de publication possibles pour une date d'effet le <%= humanize_date(@legal_effect) %> :</p>
+  <br>
+  <input type="hidden" name="starting_point" value="publication">
+  <fieldset class="form-group radio_buttons">
+    <% @publications.each_with_index do |publication, index| %>
+      <div class="custom-control my-1">
+        <input required class="custom-control-input radio_buttons" type="radio" value="<%= publication %>" name="date" id="<%= "#{index + 1}-publication" %>">
+        <label class="custom-control-label collection_radio_buttons" for="<%= "#{index + 1}-publication" %>">
+          <%= humanize_date(publication) %> (<%= insert_kind_of_day_off(publication) %>)
+        </label>
+      </div>
+    <% end %>
+  </fieldset>
+</div>

@@ -1,0 +1,29 @@
+<div>
+  <h1><span class="highlight">Contactez</span>-nous</h1>
+  <h2>Vous avez une question sur l'outil ou une suggestion d'amélioration ?</h2>
+</div>
+<form action="/contact" method="post" id="contact-form">
+  <div class="form-group">
+    <label class="control-label" for="contact_subject">Sujet :</label>
+    <input class="form-control" id="contact_subject" name="subject" size="30" type="text" placeholder="Bonjour !" required>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="contact_email">Votre email :</label>
+    <input class="form-control" id="contact_email" name="email" size="30" type="email" placeholder="john@doe.com" aria-describedby="validationEmail" required>
+    <div id="validationEmail" class="invalid-feedback">
+      Veuillez fournir une adresse email valide.
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="contact_message">Message :</label>
+    <textarea class="form-control" cols="40" id="contact_message" name="message" rows="3" required></textarea>
+  </div>
+  <div class="py-1" id="button-wrapper">
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </div>
+  <% if @success %>
+    <p class="alert alert-success mt-3">
+      Votre email a bien été envoyé.
+    </p>
+  <% end %>
+</form>

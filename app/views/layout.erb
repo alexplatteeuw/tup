@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <%= erb :'shared/meta_tags' %>
+    <%= stylesheet_pack_tag %>
+  </head>
+  <body>
+    <%= erb :'shared/navbar' %>
+    <div class="container pb-5">
+      <%= yield %>
+    </div>
+  </body>
+  <%= javascript_pack_tag %>
+</html>

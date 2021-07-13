@@ -1,0 +1,71 @@
+.flatpickr-calendar {
+  box-shadow: none;
+  margin: 1.5rem;
+}
+
+#starting-points, #compute-btn { margin-bottom: 2rem; }
+
+@media (max-width: 576px) {
+  #results label { font-size: 0.85rem; }
+  #timeline p { font-size: 0.9rem; }
+  .bullet-wrapper { min-height: 4rem; }
+}
+
+#timeline {
+  p, .col {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#wrapper {
+  margin-top: 3rem;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.date {
+  width: 6rem;
+}
+
+.bullet-wrapper {
+  min-height: 4.75rem;
+  margin: 0 0.75rem 0 1.5rem;
+}
+
+.bullet-wrapper::before {
+  position: relative;
+  content: '';
+  display: block;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  top: 2rem;
+  right: 0.375rem;
+  background-color: $red300;
+}
+
+#timeline-arrow {
+    position: relative;
+    font-weight: lighter;
+    top: 40px;
+    right: 0.5rem;
+    color: $red300;
+}
+
+#delay-extension {
+  margin-top: 1rem;
+  small {
+    display: block;
+  }
+}
+
+#rules-cards {
+  margin-bottom: 3rem;
+}
+
+#warning {
+  font-size: 2.5rem;
+  color: $red500;
+}

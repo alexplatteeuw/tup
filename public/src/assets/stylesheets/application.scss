@@ -1,0 +1,26 @@
+// Graphical variables
+@import 'config/index';
+
+// External libraries
+@import '~bootstrap/scss/bootstrap';
+@import '~flatpickr/dist/flatpickr';
+// @import '~flatpickr/dist/themes/material_red';
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+
+// CSS partials
+@import 'components/index';
+@import 'pages/index';
+
+// General
+h2 {
+  font-weight: $font-weight-normal;
+  margin: 1.8rem auto;
+}
+
+.highlight {
+  color: $red300;
+  background: $red100;
+}

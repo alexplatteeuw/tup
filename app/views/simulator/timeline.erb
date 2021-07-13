@@ -1,0 +1,39 @@
+<div id="timeline">
+  <% if @publication %>
+    <div class="row align-items-center">
+      <p class="date text-right"><%= humanize_date(@publication) %></p>
+      <div class="bullet-wrapper border-left"></div>
+      <p>Publication</p>
+    </div>
+  <% end %>
+  <% if @opposition_start %>
+    <div class="row align-items-center">
+      <p class="date text-right"><%= humanize_date(@opposition_start) %></p>
+      <div class="bullet-wrapper border-left"></div>
+      <div class="col">
+        <p>Début de la période d'opposition</p>
+        <p>des créanciers</p>
+      </div>
+    </div>
+  <% end %>
+  <% if @opposition_end %>
+    <div class="row align-items-center">
+      <p class="date text-right"><%= humanize_date(@opposition_end) %></p>
+      <div class="bullet-wrapper border-left"></div>
+      <div class="col">
+        <p>Fin de la période d'opposition</p>
+        <p>des créanciers</p>
+      </div>
+    </div>
+  <% end %>
+  <% if @legal_effect %>
+    <div class="row align-items-center">
+      <p class="date text-right"><%= humanize_date(@legal_effect) %></p>
+      <div class="bullet-wrapper border-left"></div>
+      <p>Date d'effet légal</p>
+    </div>
+  <% end %>
+  <% if publication?(@starting_point) && @theoretical_opposition_end && @theoretical_opposition_end != @opposition_end %>
+    <%= erb :'simulator/delay_extension' %>
+  <% end %>
+</div>

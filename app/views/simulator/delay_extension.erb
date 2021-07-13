@@ -1,0 +1,8 @@
+<div class="text-justify" id="delay-extension">
+  <small>
+    Le délai d'opposition expire un <%= insert_kind_of_day_off(@theoretical_opposition_end) %> (le <%= humanize_date(@theoretical_opposition_end) %>).
+  </small>
+  <small>
+    Il est <b>prorogé au prochain jour ouvrable</b>, soit au <%= humanize_date(@opposition_end) %>.
+  </small>
+</div>

@@ -1,0 +1,16 @@
+<fieldset id="starting-points">
+  <p>Retrouver les évènements clés de votre TUP :</p>
+  <div class="custom-control">
+    <% Tup::STARTING_POINTS.each do |type| %>
+      <div class="from-group mr-3">
+        <input type="radio" <%= insert_checked_attribute(type, @starting_point) %>
+          name="starting_point" value=<%= type %>
+          class="custom-control-input radio_buttons" id=<%= type %>
+          required>
+        <label class="custom-control-label collection_radio_buttons" for=<%=type %> >
+          <%= insert_label_for_starting_point(type) %>
+        </label>
+      </div>
+    <% end %>
+  </div>
+</fieldset>

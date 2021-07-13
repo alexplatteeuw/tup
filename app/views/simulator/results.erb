@@ -1,0 +1,6 @@
+<% if @publications && possible_effect?(@opposition_end) %>
+  <%= erb :'simulator/publications' %>
+<% elsif @tup %>
+  <%= erb :'simulator/impossible_effect' if legal_effect?(@starting_point) && impossible_effect?(@opposition_end) %>
+  <%= erb :'simulator/timeline' if possible_effect?(@opposition_end) %>
+<% end %>

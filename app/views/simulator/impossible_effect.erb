@@ -1,0 +1,11 @@
+<div class="px-3 text-justify">
+  <p class="text-center">
+    <i class="fas fa-exclamation-circle" id="warning"></i>
+  </p>
+  <p>
+    Une date d'effet le <%= humanize_date(@legal_effect) %> suppose que le délai d'opposition des créanciers expire le <%= humanize_date(@opposition_end) %>, qui est un <%= insert_kind_of_day_off(@opposition_end) %>.
+  </p>
+  <p>
+    Le délai d'opposition des créanciers ne peut expirer un samedi, un dimanche ou un jour férié, vous devez choisir une autre date de réalisation pour votre opération.
+  </p>
+</div>
